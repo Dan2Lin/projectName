@@ -1,0 +1,11 @@
+<h1>响应式表单</h1>
+<div>
+  <form [formGroup] = "formModel" (submit)='onSubmit()'>
+    用户名:<input name='userName' type="text" formControlName ='username'>
+    <div formGroupName='passwordGroup'>
+      <div>密码：<input type="password" name="password" formControlName='password'></div>
+      <div>确认密码：<input type="password" name="confirmPass" formControlName='confirmPass'></div>
+    </div>
+    <button type="submit">提交</button>
+  </form>
+</div>

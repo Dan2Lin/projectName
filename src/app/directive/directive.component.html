@@ -1,0 +1,29 @@
+<div>
+   <h1>指令</h1>
+  <ol>
+    <li>
+      <div>结构指令</div>
+      <div *ngIf="isDisplayMyHobby">
+        <span>我的爱好是:</span>
+        <ul>
+          <li *ngFor="let item of myHobby">{{item}}</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div>属性指令</div>
+      <span>你现在开心吗？</span>
+      <div [ngSwitch] = "emotion">
+          <span *ngSwitchCase="'happy'">
+           yes! I am happy.
+          </span>
+          <span *ngSwitchCase="'sad'">
+           NO! I am sad.
+          </span>
+         <span *ngSwitchDefault>
+           oh~ I don't know what you are saying.
+         </span>
+      </div>
+    </li>
+  </ol>
+</div>

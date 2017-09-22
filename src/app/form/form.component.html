@@ -1,0 +1,11 @@
+<h1>模板式表单</h1>
+<div>
+  <form #myForm="ngForm" (submit)='onSubmit(myForm.value)'>
+    用户名:<input name='userName' type="text" ngModel>
+    <div ngModelGroup="passwordGroup">
+      <div>密码：<input type="password" name="password" ngModel></div>
+      <div>确认密码：<input type="password" name="confirmPass" ngModel></div>
+    </div>
+    <button type="submit">提交</button>
+  </form>
+</div>

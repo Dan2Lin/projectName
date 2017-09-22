@@ -1,0 +1,21 @@
+<div>
+  <h2>数据绑定的四种形式</h2>
+  <ol>
+    <li>
+      <div>从component到dom{{dataBind1}}</div>
+    </li>
+    <li>
+      <div>从component到dom[property]:图片的src属性是后台动态绑定的</div>
+      <img [src] = "imgUrl" width="200" height="300"/>
+    </li>
+    <li>
+      <div>从dom到component:(event)='handle()'</div>
+      <button (click) = 'handleClick()' >click me</button>
+    </li>
+    <li>
+      <div>双向数据绑定[(ngModel)]='value',<span class="tips">使用ngModel,需要在app.module.ts中引入FormModule模块</span></div>
+      <div>你输入了:{{inputName}}</div>
+      <input [(ngModel)] = 'inputName'>
+    </li>
+  </ol>
+</div>
